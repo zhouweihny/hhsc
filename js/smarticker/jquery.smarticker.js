@@ -14,6 +14,7 @@
 			nx:'start',
 			newsRollerIndex:0,
 			lastIndex:99999,
+			correctwidth: 10,
 			clearTimeouts: function(){
 				for(var i = 0, z = settings.timeouts.length; i < z; i++){
 					clearTimeout(settings.timeouts[i]);
@@ -539,7 +540,12 @@
 							logThis('element: '+$('.activeRollerItem',element).width());
 							logThis('max: '+settings.maxWidth);
 							if($('.activeRollerItem',element).width() > settings.maxWidth){
-								settings.maxWidth = $('.activeRollerItem',element).width() - settings.maxWidth + 10;
+								// settings.maxWidth = $('.activeRollerItem',element).width() - settings.maxWidth + 10;
+								/**
+								 * modby zw 2018年10月26日09:53:15
+								 * 修正不完全显示
+								**/
+								settings.maxWidth = $('.activeRollerItem',element).width() - settings.maxWidth + settings.correctwidth;
 								$('.activeRollerItem',element).css('display','block');
 
 								if(settings.direction == 'rtl'){
