@@ -1,0 +1,186 @@
+{
+    "code": "0000",
+    "message": "",
+    "result": true,
+    "data": {
+	    "thfsPojo": [
+	      {
+	        "fdname": "thfs",
+	        "dictlist": "快递",
+	        "bianh": "thfs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "thfs",
+	        "dictlist": "其它",
+	        "bianh": "thfs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "thfs",
+	        "dictlist": "物流",
+	        "bianh": "thfs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "thfs",
+	        "dictlist": "自提",
+	        "bianh": "thfs",
+	        "isMr": "否",
+	        "xlh": 0
+	      }
+	    ],
+	    "allMchkPojo": [
+	      {
+	        "dwbh": "DWH00001247",
+	        "danwbh": "X010786",
+	        "dwmch": "南平市建阳区元济大药房",
+	        "zjm": null,
+	        "isjh": null,
+	        "isxs": null,
+	        "shxycode": null,
+	        "shxycoderq": null,
+	        "shxycodesxrq": null,
+	        "danganbh": null,
+	        "khyh": null,
+	        "yhzhh": null,
+	        "addressCw": null,
+	        "frdb": null,
+	        "qyfzr": null,
+	        "telephone": null,
+	        "addressFh": "",
+	        "leibieJ": null,
+	        "zipno": null,
+	        "province": null,
+	        "city": null,
+	        "county": null,
+	        "xvkz": null,
+	        "xvkzsxrq": null,
+	        "eleccode": null,
+	        "zlzscode": null,
+	        "zlzscodesxrq": null,
+	        "zlbzxyssxrq": null,
+	        "jingyfw": null,
+	        "beactive": null,
+	        "isqyyz": null,
+	        "ispjys": null,
+	        "caozyid": null,
+	        "caozrq": null,
+	        "caozontime": null,
+	        "leibieX": null,
+	        "kehudengji": null,
+	        "ywyid": null,
+	        "lxr": null,
+	        "lxrdh": null,
+	        "idcard": null,
+	        "shenhe": null,
+	        "islocked": null,
+	        "isSPay": null,
+	        "isTPay": null,
+	        "shqrid": null,
+	        "shqrq": null
+	      },
+	      {
+	        "dwbh": "DWH00001389",
+	        "danwbh": "X010867",
+	        "dwmch": "南平市建阳区永福康大药房",
+	        "zjm": null,
+	        "isjh": null,
+	        "isxs": null,
+	        "shxycode": null,
+	        "shxycoderq": null,
+	        "shxycodesxrq": null,
+	        "danganbh": null,
+	        "khyh": null,
+	        "yhzhh": null,
+	        "addressCw": null,
+	        "frdb": null,
+	        "qyfzr": null,
+	        "telephone": null,
+	        "addressFh": "",
+	        "leibieJ": null,
+	        "zipno": null,
+	        "province": null,
+	        "city": null,
+	        "county": null,
+	        "xvkz": null,
+	        "xvkzsxrq": null,
+	        "eleccode": null,
+	        "zlzscode": null,
+	        "zlzscodesxrq": null,
+	        "zlbzxyssxrq": null,
+	        "jingyfw": null,
+	        "beactive": null,
+	        "isqyyz": null,
+	        "ispjys": null,
+	        "caozyid": null,
+	        "caozrq": null,
+	        "caozontime": null,
+	        "leibieX": null,
+	        "kehudengji": null,
+	        "ywyid": null,
+	        "lxr": null,
+	        "lxrdh": null,
+	        "idcard": null,
+	        "shenhe": null,
+	        "islocked": null,
+	        "isSPay": null,
+	        "isTPay": null,
+	        "shqrid": null,
+	        "shqrq": null
+	      }
+	    ],
+	    "allGldictPojo": [
+	      {
+	        "fdname": "fapiaofs",
+	        "dictlist": "即时普票",
+	        "bianh": "fapiaofs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "fapiaofs",
+	        "dictlist": "即时专票",
+	        "bianh": "fapiaofs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "fapiaofs",
+	        "dictlist": "无",
+	        "bianh": "fapiaofs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "fapiaofs",
+	        "dictlist": "月底普票",
+	        "bianh": "fapiaofs",
+	        "isMr": "否",
+	        "xlh": 0
+	      },
+	      {
+	        "fdname": "fapiaofs",
+	        "dictlist": "月底专票",
+	        "bianh": "fapiaofs",
+	        "isMr": "否",
+	        "xlh": 0
+	      }
+	    ],
+	    "addressPojo": [
+	      {
+	        "djSn": 616,
+	        "dzyid": "ZHY00001470",
+	        "lxrdzh": "汽车站对面金色年华楼下大宅门置业",
+	        "provinceShh": "福建省",
+	        "cityShh": "南平市",
+	        "countyShh": "建阳区",
+	        "shhrShh": "朱波",
+	        "lxdhShh": "19970204715"
+	      }
+	    ]
+	}
+}

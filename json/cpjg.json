@@ -1,0 +1,43 @@
+{
+  "code": "0000",
+  "message": "",
+  "result": true,
+  "data": [
+    {
+      "orgid": "ORG00000002",
+      "treecode": "002",
+      "djbs": null,
+      "orgcode": "002",
+      "orgname": "江西金预康健康产业有限公司",
+      "zjm": null,
+      "beactive": null,
+      "caozyid": null,
+      "caozrq": null,
+      "caozontime": null,
+      "zlDzh": null,
+      "zlShjianr": null,
+      "zlLxrdh": null,
+      "hwDzh": null,
+      "hwShjianr": null,
+      "hwLxrdh": null
+    },
+    {
+      "orgid": "ORG00000003",
+      "treecode": "003 ",
+      "djbs": null,
+      "orgcode": "003",
+      "orgname": "江西博利民康医药有限公司",
+      "zjm": null,
+      "beactive": null,
+      "caozyid": null,
+      "caozrq": null,
+      "caozontime": null,
+      "zlDzh": null,
+      "zlShjianr": null,
+      "zlLxrdh": null,
+      "hwDzh": null,
+      "hwShjianr": null,
+      "hwLxrdh": null
+    }
+  ]
+}

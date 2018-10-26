@@ -192,7 +192,7 @@
     </ul>
 </div>
 
-<section class="J_goodsItem">
+<section class="J_goodsItem" id="J_goodsItem">
     <div class="weui-flex">
         <div class="weui-flex__item">
             <div class="item">
@@ -347,6 +347,10 @@ $(function(){
     });
 
     initEcharts();
+
+    $("#J_goodsItem").on("click", ".item", function(){
+        window.location.href = 'goods.html#/J_router_main';
+    })
 
 })
 

@@ -159,7 +159,7 @@ function loginAction(){
                 zuiTotast('正在为您跳转...');
                 Util.lStorage.setParam("username_local", name);
                 
-                // window.location.href = 'index.html';
+                window.location.href = 'index.html';
             }else{
                 zuiAlert(json.message || "登录失败！");
             }

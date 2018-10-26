@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/font-awesome.css?v=4.4.0">
 <link rel="stylesheet" href="js/mobiscroll/mobiscroll.zcore.css">
 <link rel="stylesheet" href="js/iscroll/4.2.5/pullToRefresh.css">
-<link rel="stylesheet" href="css/wxzui_common.css?v=8">
+<link rel="stylesheet" href="css/wxzui_common.css?v=9">
 <style>
 .zui .J_header .J_header_right_icon .fa {
     font-size: 1rem;
@@ -135,7 +135,7 @@
 .J_detail_list .item .J_drugbtns .J_num {
     color: #000;
 }
-.weui-skin_android .weui-actionsheet__menu {
+/* .weui-skin_android .weui-actionsheet__menu {
     background: transparent;
 }
 .weui-skin_android .weui-actionsheet__menu .weui-cells {
@@ -148,12 +148,37 @@
 .weui-skin_android .weui-actionsheet__menu .weui-cells input {
     color: #000;
     font-size: .65rem;
+} */
+.J_router_customer .weui-cell .weui-cell__hd {
+    border-right: 1px solid #ddd;
+    width: 3rem;
+    margin-right: .5rem;
+}
+.J_router_customer .weui-cell .weui-cell__bd .weui-input {
+    text-align: right;
+    color: #000;
+    font-size: .65rem;
+    padding-right: 10px;
+}
+.zui.gray {
+    background: #f5f5f5;
+}
+.J_sureBtn {
+    width: 60%;
+    background: #0AB0B3;
+    color: #fff;
+    font-size: .7rem;
+    border-color: #0AB0B3;
+    line-height: 2.6;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
 }
 </style>
 </head>
 <body class="zui">
 
-<section class="J_router_main">
+<section class="fn-hide J_router_main">
     <header class="J_header zfixed">
         <a class="J_header_back" href="index.html"><i class="fa fa-angle-left"></i></a>
         <h1 class="J_header-title">商品</h1>
@@ -162,8 +187,7 @@
 
     <div class="J_customerWrap">
         <p>
-            <span>客户下单(必填)</span>
-            <span class="J_customername"></span>
+            <span class="J_customername">客户下单(必填)</span>
             <i class="fa fa-caret-right" aria-hidden="true"></i>
         </p>
     </div>
@@ -188,7 +212,7 @@
                 <li>其他</li>
             </ul>
         </div>
-        <section class="fn-right J_detail_list">
+        <div class="fn-right J_detail_list">
             <ul>
                 <li class="item fn-clear">
                     <div class="logoWrap">
@@ -224,86 +248,226 @@
                         <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
                     </div>
                 </li>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林2</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林2</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
             </ul>
-        </section>
-
+        </div>
     </div>
-    
+</section>
+
+<section class="fn-hide J_router_customer">
+    <header class="J_header">
+        <a class="J_header_back" href="javascript:;"><i class="fa fa-angle-left"></i></a>
+        <h1 class="J_header-title">选择客户</h1>
+    </header>
+
+    <div class="J_content">
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="customerName" class="weui-label">客户名称</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="customerName" type="text" placeholder="客户名称" readonly="">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="fapiaofs" class="weui-label">税票类型</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="fapiaofs" type="text" value="" placeholder="税票类型" readonly="">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="taxBranch" class="weui-label">出票机构</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="taxBranch" type="text" value="" placeholder="出票机构" readonly="">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="thfs" class="weui-label">提货方式</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="thfs" type="text" value="" placeholder="提货方式" readonly="">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="expressAddress" class="weui-label">发货地址</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="expressAddress" type="text" value="" placeholder="发货地址" readonly="">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__hd"><label for="beizhu" class="weui-label">备注</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="beizhu" type="text" maxlength="100" value="" placeholder="备注">
+                </div>
+                <div class="weui-cell__ft"></div>
+            </div>
+        </div>
+
+        <button type="button" class="mui-btn mui-btn-outlined J_sureBtn" id="J_sureBtn">确定</button>
+    </div>
 </section>
 
 <div class="weui-skin_android" id="J_custom_dia" style="display: none">
     <div class="weui-mask weui-mask--visible"></div>
     <div class="weui-actionsheet">
         <div class="weui-actionsheet__menu">
-            <div class="weui-cells weui-cells_form">
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="customerName" class="weui-label">客户名称</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="customerName" type="text" placeholder="客户名称" readonly="">
-                        <input class="weui-input" type="hidden" id="dwbh" name="dwbh" value="">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="fapiaofs" class="weui-label">税票类型</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="fapiaofs" type="text" value="" placeholder="税票类型" readonly="">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="taxBranch" class="weui-label">出票机构</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="taxBranch" type="text" value="" placeholder="出票机构" readonly="">
-                        <input class="weui-input" type="hidden" id="orgid" name="orgid" value="">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="thfs" class="weui-label">提货方式</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="thfs" type="text" value="" placeholder="提货方式" readonly="">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="expressAddress" class="weui-label">发货地址</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="expressAddress" type="text" value="" placeholder="发货地址" readonly="">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-                <div class="weui-cell weui-cell_access">
-                    <div class="weui-cell__hd"><label for="beizhu" class="weui-label">备注</label></div>
-                    <div class="weui-cell__bd">
-                        <input class="weui-input" id="beizhu" type="text" maxlength="100" value="" placeholder="备注">
-                    </div>
-                    <div class="weui-cell__ft"></div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
 
 <script src="js/jquery-weui/lib/jquery-2.1.4.js"></script>
-<script src="js/jquery-weui/js/jquery-weui.min.js"></script>
+<script src="js/jquery-weui/js/jquery-weui.min.js?v=1"></script>
 <script src="js/mobiscroll/mobiscroll.zcore.js"></script>
 <script src="js/director.min.js"></script>
 <script src="js/iscroll/4.2.5/iscroll.js"></script>
 <script src="js/iscroll/4.2.5/pullToRefresh.js"></script>
 <script src="js/handlebars.js"></script>
-<script src="js/wxzui_common.js?v=6"></script>
+<script src="js/wxzui_common.js?v=7"></script>
 <script>
 
 
 srvMap.add("sendcode", "success.json", "");//获取验证码
 
-var clickFlag = 0;
+var clickFlag = 0,
+    curSection = null;
 
 $(function(){
 
+    var routerObj = {
+        '/J_router_detail': {
+            on: function(){
+                var id = $.getUrlVar('id');
+                curSection = $(".J_router_detail .J_content");
+                setTimeout(function(){
+                    showDetail(id);
+                }, 30)
+            },
+            /*after: function(){
+                $(".J_router_detail .J_content").html('');
+                removeResDes();
+            },*/
+            after: function(){
+                curSection.html('');
+                curSection = $(".J_router_main .J_content");
+            }
+        },
+        '/J_router_search': {
+            on: function(){
+                curSection = $(".J_router_search .J_content");
+                setTimeout(function(){
+                    showSearch();
+                }, 30)
+            },
+            after: function(){
+                curSection.html('');
+                curSection = $(".J_router_main .J_content");
+            }
+        },
+        '/J_router_main': {
+            once: function(){
+                setTimeout(function(){
+                    initPage();
+                }, 30)
+            },
+            on: function(){
+                curSection = $(".J_router_main .J_goodsWrap");
+            }
+        },
+        '/J_router_customer': {
+            once: function(){
+                setTimeout(function(){
+                    initCustomer();
+                }, 30)
+            },
+            on: function(){
+                curSection = $(".J_router_main .J_content");
+                $(".zui").addClass('gray');
+            },
+            after: function(){
+                $(".zui").removeClass('gray');
+            }
+        }
+    }
+    initZrouter(routerObj, function(router){
+        zrouter = router;
+    });
+})
+
+function initPage(){
     $(".J_customerWrap").on("click", function(){
-        $('#J_custom_dia').showZuiDialog();
+        // $('#J_custom_dia').showZuiDialog();
+        zrouter.setRoute("J_router_customer");
     })
 
     $(".J_drugbtns").on("click", ".J_add", function(){
@@ -313,10 +477,165 @@ $(function(){
             _J_minus = _parent.find(".J_del");
 
         $('#J_addNum_dia').showZuiDialog();
-
     })
 
-})
+    $("#J_sidebar").on("click", "li", function(){
+        var _this = $(this);
+
+        if(_this.hasClass('active'))
+            return false;
+        _this.siblings('li').removeClass('active').end().addClass('active');
+    })
+}
+
+function initCustomer(){
+    createLoading();
+    $.PostJson("json/customer.json", "", function(state, json){
+        if(state == 'success'){
+            if(json && json.code == '0000'){
+                
+                //客户名称
+                var mchkArray = [],
+                    allMchkPojo = json.data.allMchkPojo;
+                for(var i=0,len=allMchkPojo.length; i<len; i++){
+                    var attr = {
+                        title: allMchkPojo[i].dwmch,
+                        value: allMchkPojo[i].dwbh,
+                        address: allMchkPojo[i].addressFh
+                    };
+                    mchkArray.push(attr);
+                }
+
+                var oldDwbhValue = '';
+                $("#customerName").select({
+                    title: "客户名称",
+                    items: mchkArray,
+                    onChange: function(d) {
+                        // 获取出票机构
+                        if (d.values && oldDwbhValue !== d.values){
+                            getCPJG(d.values);
+                        }
+                        oldDwbhValue = d.values;
+                    }
+                });
+
+                //税票类型
+                var gldictArray = [],
+                    allGldictPojo = json.data.allGldictPojo;
+                for(var i=0,len=allGldictPojo.length; i<len; i++){
+                    var attr = {
+                        title: allGldictPojo[i].dictlist,
+                        value: allGldictPojo[i].dictlist
+                    };
+                    gldictArray.push(attr);
+                }
+
+                $("#fapiaofs").select({
+                    title: "税票类型",
+                    items: gldictArray,
+                    onChange: function(d) {
+                        //console.log(this, d);
+                    }
+                });
+
+                //提货方式
+                var thfsArray = [],
+                    thfsPojo = json.data.thfsPojo;
+                for(var i=0,len=thfsPojo.length; i<len; i++){
+                    var attr = {
+                        title: thfsPojo[i].dictlist,
+                        value: thfsPojo[i].dictlist
+                    };
+                    thfsArray.push(attr);
+                }
+
+                $("#thfs").select({
+                    title: "提货方式",
+                    items: thfsArray,
+                    onChange: function(d) {
+                        //console.log(this, d);
+                    }
+                });
+
+                //收货地址
+                var addressArray = [],
+                    addressPojo = json.data.addressPojo;
+                for(var i=0,len=addressPojo.length; i<len; i++){
+                    var obj = addressPojo[i],
+                        provinceShh = obj.provinceShh||'',
+                        cityShh = obj.cityShh||'',
+                        countyShh = obj.countyShh||'',
+                        lxrdzh = obj.lxrdzh||'',
+                        djSn =obj.djSn||'',
+                        lxr = obj.shhrShh||'',
+                        lxdh = obj.lxdhShh||'';
+
+                    var detail = lxr + " " + lxdh + " " +  provinceShh + " " + cityShh + " " + countyShh + " " + lxrdzh;
+                    var attr = {
+                        title:detail,
+                        value:djSn
+                    }
+                    addressArray.push(attr);
+                }
+                $("#expressAddress").select({
+                    title: "收货地址",
+                    items: addressArray,
+                    onChange: function(d) {
+                    }
+                });
+            }else{
+                zuiAlert(json.message || "获取客户信息失败！");
+            }
+        }
+        unblockLoading();
+    })
+
+    $("#J_sureBtn").on("click", function(){
+        var cname = $("#customerName").val(),
+            fapiaofs = $("#fapiaofs").val(),
+            taxBranch = $("#taxBranch").val(),
+            thfs = $("#thfs").val(),
+            expressAddress = $("#expressAddress").val(),
+            beizhu = $("#beizhu").val();
+
+        if(cname){
+            zrouter.setRoute("J_router_main");
+            $(".J_customername").text(cname);
+        }else{
+            zuiTotast('请选择客户');
+        }
+    })
+}
+
+function getCPJG(val){
+    createLoading();
+    $.PostJson("json/cpjg.json", "", function(state, json){
+        if(state == 'success'){
+            if(json && json.code == '0000'){
+                
+                var orgdocArray = [];
+                for(var i=0,len=json.data.length; i<len; i++){
+                    var attr = {
+                        title: json.data[i].orgname,
+                        value: json.data[i].orgid
+                    };
+                    orgdocArray.push(attr);
+                }
+
+                $("#taxBranch").select({
+                    title: "出票机构",
+                    items: orgdocArray,
+                    onChange: function(d) {
+                        
+                    }
+                });
+            }else{
+                zuiAlert(json.message || "获取出票机构失败！");
+            }
+        }
+        unblockLoading();
+    })
+}
 </script>
 </body>
 </html>

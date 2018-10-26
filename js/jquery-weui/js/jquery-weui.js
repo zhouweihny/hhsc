@@ -4419,7 +4419,7 @@ Device/OS Detection
           }
           pickerClass = 'weui-picker-modal picker-columns ' + (p.params.cssClass || '') + (p.params.rotateEffect ? ' picker-3d' : '') + (p.params.cols.length === 1 ? ' picker-columns-single' : '');
           pickerHTML =
-              '<div class="' + (pickerClass) + '">' +
+              '<div class="weui-mask weui-mask--visible"></div><div class="' + (pickerClass) + '">' +
                   (p.params.toolbar ? p.params.toolbarTemplate.replace(/{{closeText}}/g, p.params.toolbarCloseText).replace(/{{title}}/g, p.params.title) : '') +
                   '<div class="picker-modal-inner picker-items">' +
                       colsHTML +
@@ -4723,7 +4723,7 @@ Device/OS Detection
     });
 
 
-    this.tpl = $.t7.compile("<div class='weui-picker-modal weui-select-modal'>" + config.toolbarTemplate + (config.multi ? config.checkboxTemplate : config.radioTemplate) + "</div>");
+    this.tpl = $.t7.compile("<div class='weui-mask weui-mask-select weui-mask--visible'></div><div class='weui-picker-modal weui-select-modal'>" + config.toolbarTemplate + (config.multi ? config.checkboxTemplate : config.radioTemplate) + "</div>");
 
     if(config.input !== undefined) this.$input.val(config.input);
 
@@ -4838,6 +4838,11 @@ Device/OS Detection
 
     this._open = true;
     if(config.onOpen) config.onOpen(this);
+
+    var self = this;
+    $(".weui-mask-select").off("click").on("click", function(){
+      self.close();
+    })
   }
 
   Select.prototype.close = function(callback, force) {
