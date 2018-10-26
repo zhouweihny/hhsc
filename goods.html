@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>商品列表</title>
+<link rel="stylesheet" href="js/jquery-weui/lib/weui.min.css">
+<link rel="stylesheet" href="js/jquery-weui/css/jquery-weui.min.css">
+<link rel="stylesheet" href="css/font-awesome.css?v=4.4.0">
+<link rel="stylesheet" href="js/mobiscroll/mobiscroll.zcore.css">
+<link rel="stylesheet" href="js/iscroll/4.2.5/pullToRefresh.css">
+<link rel="stylesheet" href="css/wxzui_common.css?v=8">
+<style>
+.zui .J_header .J_header_right_icon .fa {
+    font-size: 1rem;
+}
+.J_customerWrap {
+    margin-top: 2.3rem;
+    height: 2rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.J_customerWrap p {
+    width: 80%;
+    background: #F7F7F7;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 1.6rem;
+    margin-top: 2.6rem;
+    font-size: .7rem;
+    line-height: 1.6rem;
+}
+.J_customerWrap p .J_customername {
+    
+}
+.J_customerWrap p .fa {
+    
+}
+.J_goodsWrap {
+    position: relative;
+}
+.J_goodsWrap .J_sidebar {
+    position: fixed;
+    left: 0;
+    top: 5rem;
+    bottom: 0;
+    overflow-y: scroll;
+    background: #F6F6F9;
+    width: 4rem;
+}
+.J_goodsWrap .J_sidebar li {
+    padding: 12px 10px;
+    font-size: .65rem;
+    text-align: center;
+}
+.J_goodsWrap .J_sidebar li.active {
+    background: #fff;
+    position: relative;
+    color: #FB6328
+}
+.J_goodsWrap .J_sidebar li.active:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 100%;
+    background: #FB6328;
+    top: 0;
+    left: 0;
+}
+.J_goodsWrap .J_detail_list {
+    background: #fff;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 4.2rem;
+    top: 5rem;
+    overflow-y: scroll;
+    padding: 0;
+}
+.J_goodsWrap .J_detail_list .item {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 1px 1px -1px rgba(0,0,0,.2), 0 3px 6px 0 rgba(0,0,0,.14), 0 1px 9px 0 rgba(0,0,0,.12);
+}
+.J_goodsWrap .J_detail_list .item a {
+    display: block;
+}
+.J_detail_list .item .logoWrap {
+    width: 3rem;
+    height: 3rem;
+    float: left;
+}
+.J_detail_list .item .logoWrap .logo {
+    width: 100%;
+}
+.J_detail_list .item .J_druginfo {
+    float: left;
+    width: calc(100% - 3.5rem);
+    margin-left: .5rem;
+}
+.J_detail_list .item .J_druginfo .tit {
+    font-size: .7rem;
+}
+.J_detail_list .item .J_druginfo p {
+    font-size: .6rem;
+}
+.J_detail_list .item .J_druginfo p span {
+
+}
+.J_detail_list .item .J_druginfo p.J_subinfo {
+    font-size: .5rem;
+    color: #737373;
+}
+.J_detail_list .item .J_druginfo p.J_price {
+    color: #E5665D;
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+.J_detail_list .item .J_drugbtns {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.9rem;
+}
+.J_detail_list .item .J_drugbtns .J_add {
+    color: #2FD661;
+}
+.J_detail_list .item .J_drugbtns .J_del {
+    color: #fb6328;
+}
+.J_detail_list .item .J_drugbtns .J_num {
+    color: #000;
+}
+.weui-skin_android .weui-actionsheet__menu {
+    background: transparent;
+}
+.weui-skin_android .weui-actionsheet__menu .weui-cells {
+    border-radius: 5px;
+}
+.weui-skin_android .weui-actionsheet__menu .weui-cells label {
+    font-size: .65rem;
+    width: 4rem;
+}
+.weui-skin_android .weui-actionsheet__menu .weui-cells input {
+    color: #000;
+    font-size: .65rem;
+}
+</style>
+</head>
+<body class="zui">
+
+<section class="J_router_main">
+    <header class="J_header zfixed">
+        <a class="J_header_back" href="index.html"><i class="fa fa-angle-left"></i></a>
+        <h1 class="J_header-title">商品</h1>
+        <a class="J_header_right_icon" href="#/J_router_search"><i class="fa fa-search" aria-hidden="true"></i></a>
+    </header>
+
+    <div class="J_customerWrap">
+        <p>
+            <span>客户下单(必填)</span>
+            <span class="J_customername"></span>
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </p>
+    </div>
+    
+    <div class="J_goodsWrap fn-clear">
+        <div class="fn-left J_sidebar" id="J_sidebar">
+            <ul>
+                <li class="active">药品</li>
+                <li>保健</li>
+                <li>消毒</li>
+                <li>器械</li>
+                <li>食品</li>
+                <li>促销</li>
+                <li>资料</li>
+                <li>其他</li>
+                <li>保健</li>
+                <li>消毒</li>
+                <li>器械</li>
+                <li>食品</li>
+                <li>促销</li>
+                <li>资料</li>
+                <li>其他</li>
+            </ul>
+        </div>
+        <section class="fn-right J_detail_list">
+            <ul>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li class="item fn-clear">
+                    <div class="logoWrap">
+                        <img src="css/img/1.jpg" class="logo">
+                    </div>
+                    <div class="J_druginfo">
+                        <h5 class="tit">阿莫西林2</h5>
+                        <p class="J_subinfo">规格：<span>1盒*0.5g:2ml*10支/300箱</span></p>
+                        <p class="J_subinfo">厂商：<span>汇仁医药贸易快批部</span></p>
+                        <p class="J_subinfo">库存：<span>9999</span></p>
+                        <p class="J_price"></p>
+                    </div>
+                    <div class="J_drugbtns">
+                        <i class="fa fa-minus-circle fn-hide J_del" aria-hidden="true"></i>
+                        <span class="fn-hide J_num">1</span>
+                        <i class="fa fa-plus-circle J_add" aria-hidden="true"></i>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    
+</section>
+
+<div class="weui-skin_android" id="J_custom_dia" style="display: none">
+    <div class="weui-mask weui-mask--visible"></div>
+    <div class="weui-actionsheet">
+        <div class="weui-actionsheet__menu">
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="customerName" class="weui-label">客户名称</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="customerName" type="text" placeholder="客户名称" readonly="">
+                        <input class="weui-input" type="hidden" id="dwbh" name="dwbh" value="">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="fapiaofs" class="weui-label">税票类型</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="fapiaofs" type="text" value="" placeholder="税票类型" readonly="">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="taxBranch" class="weui-label">出票机构</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="taxBranch" type="text" value="" placeholder="出票机构" readonly="">
+                        <input class="weui-input" type="hidden" id="orgid" name="orgid" value="">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="thfs" class="weui-label">提货方式</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="thfs" type="text" value="" placeholder="提货方式" readonly="">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="expressAddress" class="weui-label">发货地址</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="expressAddress" type="text" value="" placeholder="发货地址" readonly="">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__hd"><label for="beizhu" class="weui-label">备注</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="beizhu" type="text" maxlength="100" value="" placeholder="备注">
+                    </div>
+                    <div class="weui-cell__ft"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-weui/lib/jquery-2.1.4.js"></script>
+<script src="js/jquery-weui/js/jquery-weui.min.js"></script>
+<script src="js/mobiscroll/mobiscroll.zcore.js"></script>
+<script src="js/director.min.js"></script>
+<script src="js/iscroll/4.2.5/iscroll.js"></script>
+<script src="js/iscroll/4.2.5/pullToRefresh.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/wxzui_common.js?v=6"></script>
+<script>
+
+
+srvMap.add("sendcode", "success.json", "");//获取验证码
+
+var clickFlag = 0;
+
+$(function(){
+
+    $(".J_customerWrap").on("click", function(){
+        $('#J_custom_dia').showZuiDialog();
+    })
+
+    $(".J_drugbtns").on("click", ".J_add", function(){
+        var _this = $(this),
+            _parent = _this.parent(),
+            _J_num = _parent.find(".J_num"),
+            _J_minus = _parent.find(".J_del");
+
+        $('#J_addNum_dia').showZuiDialog();
+
+    })
+
+})
+</script>
+</body>
+</html>

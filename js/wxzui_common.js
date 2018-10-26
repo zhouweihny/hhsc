@@ -1029,3 +1029,34 @@ function getAjaxDataIscrollCommon(param){
         unblockLoading();
     })
 }
+
+function showZuiDialog(obj, callback){
+    
+}
+
+;(function($){
+    /**
+     * $("#androidActionsheet").showZuiDialog();
+     * 显示居中dialog
+    **/
+    $.fn.showZuiDialog = function(param) {
+        var opt = {
+            closeOnClickMask: true,
+            ca: function(){
+                
+            }
+        }
+        var _opt = $.extend({}, opt, param),
+            _this = this;
+        _this.fadeIn(200);
+        if(_opt.closeOnClickMask){
+            _this.find('.weui-mask').on('click',function () {
+                _this.fadeOut(200);
+            });
+        }
+        if(_opt.ca && typeof _opt.ca == 'function')
+            _opt.ca();
+        
+        return _this;
+    };
+})(jQuery);

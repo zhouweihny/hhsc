@@ -243,13 +243,14 @@ body {
     border-top: 0.05rem solid #e5e5e5;
     background: #fff;
     color: #019589;
-    z-index: 99;
+    z-index: 1001;
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 2.3rem;
     line-height: 2.3rem;
+    overflow: hidden;
 }
 .zui .J_header.zfixed {
 	position: fixed;
